@@ -3,13 +3,52 @@
 	<head>
 		<title>IF973 - Fundamentos de Sistemas de Informação</title>
 
-		<!-- FAVICON -->
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="generator" content="pandoc" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" type="text/css" href="votação.css">
 
-		<!-- STYLESHEETS -->
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/mytemplate.css">
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/default.css">
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/phone.css">
-		<style type="text/css">
+		<base target="_blank">
+
+		<script type="text/javascript">
+			var SLIDE_CONFIG = {
+			 	settings: {
+					title: "Fundamentos de Sistemas de Informação",
+					subtitle: "O que é Informação?",
+					useBuilds: true,
+					usePrettify: true,
+					enableSlideAreas: true,
+					enableTouch: true
+				},
+
+				presenters: {
+					name: "",
+					company: "",
+				 	gplus: "",
+					twitter: "",
+					www: "",
+					github: ""
+				}
+			}
+		</script>
+
+		<link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet">
+		<link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/default.css" rel="stylesheet">
+		<link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet">
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/hammer.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-controller.js"></script>
+		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+	 	<style type="text/css">
 			b, strong {
 				font-weight: bold;
 			}
@@ -35,52 +74,7 @@
 			}
 		</style>
 
-		<!-- FONTS -->
-		<link rel="stylesheet" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/fonts/fonts.css">
-
-		<!-- SCRIPTS -->
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/hammer.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-controller.js"></script>
-		<script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-deck.js"></script>
-		<script type="text/javascript">
-			var SLIDE_CONFIG = {
-				// Slide settings
-				settings: {
-					title: 'Fundamentos de Sistemas de Informação',
-					subtitle: 'O que é Informação?',
-					useBuilds: true,
-					usePrettify: true,
-					enableSlideAreas: true,
-					enableTouch: true
-				},
-
-				// Author information
-				presenters: {
-					name: "",
-					company: "",
-					gplus: "",
-					twitter: "",
-					www: "",
-					github: ""
-				}
-			}
-		</script>
-
-		<!-- LASTEST COMPILED AND MINIFIED BOOTSTRAP -->
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css">
-
-		<base target="_blank">
-		<meta charset="UTF-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="generator" content="pandoc">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/mytemplate.css" type="text/css">
 	</head>
 
 	<body style="opacity: 0">
@@ -148,7 +142,7 @@
 						<li>Mais recentemente, o processo de análise de dados tem sido conhecido<br>
 						como Data Science</li>
 						<div class="centered">
-							<img src="minerador.png" width="450px">
+							<img src="minerador.png" width="400px">
 						</div>
 					</ul>
 				</article>
@@ -156,17 +150,17 @@
 
 			<!-- SLIDE 5 -->
 			<slide class="">
-				<hgroup><h2>O que é informação? </h2></hgroup>
+				<hgroup><h2>Por fim, o que é informação? </h2></hgroup>
 				<article id="o-que-e-informacao">
 					<ul>
 						<li>A informação deve ser completa, confiável, relevante, veríficavel, acessível e, uma vez que traz vantagem competitiva, segura</li>
-						<li>Para melhor uso da informação na tomada de decisão, é importante que ela esteja atualizada, cubra uma area signficativa e seja disponibilizada para as pessoas corretas </li>
+						<li>Para melhor uso da informação na tomada de decisão, é importante que ela esteja atualizada, cubra uma area signficativa e seja disponibilizada para as pessoas corretas</li>
 					</ul>
 
 					<br>
 
 					<blockquote>
-						<p style="text-align: justify; margin-top: 15px">”Informação é a resultante do processamento, manipulação e organização de dados, de tal forma que represente uma modificação no conhecimento do sistema que a recebe”</p>
+						<p style="text-align: justify; margin-top: 15px">Informação é a resultante do processamento, manipulação e organização de dados, de tal forma que represente uma modificação no conhecimento do sistema que a recebe</p>
 					</blockquote>
 				</article>
 			</slide>
@@ -176,11 +170,11 @@
 				<hgroup><h2>Referências</h2></hgroup>
 				<article id="referencias">
 					<font size=3>
-						<p>Wall, M. (2014) <em>Big Data: Are you ready for blast-off?</em>. BBC News. <a href='http://www.bbc.com/news/business-26383058' title=''>http://www.bbc.com/news/business-26383058</a></p>
+						<p>SETZER, V. W. (1999). <em>Dado, Conhecimento, Informação e Competência</em>. Disponível em: <a href='https://www.ime.usp.br/~vwsetzer/datagrama.html' title=''>www.ime.usp.br/~vwsetzer/datagrama.html</a>.<br>Acesso em: 20 ago. 2017.</p>
 
-						<p>Burn-Murdoch, J. (2012) <em>Study: less than 1% of the world&#39;s data is analysed, over 80% is unprotected</em>. The Guardian. <a href='https://www.theguardian.com/news/datablog/2012/dec/19/big-data-study-digital-universe-global-volume' title=''>https://www.theguardian.com/news/datablog/2012/dec/19/big-data-study-digital-universe-global-volume</a></p>
+						<p>HJORLAND, B. CAPURRO, R. (2007). <em>O conceito de informação</em>. Disponível em: <a href='https://www.theguardian.com/news/datablog/2012/dec/19/big-data-study-digital-universe-global-volume' title=''>https://www.theguardian.com/news/datablog/2012/<br>dec/19/big-data-study-digital-universe-global-volume</a>. Acesso em: 20 ago. 2017.</p>
 
-						<p>Hays, C. L. (2004) <em>What Wal-Mart Knows About Customers&#39; Habits</em>. The New York Times. <a href='http://www.nytimes.com/2004/11/14/business/yourmoney/what-walmart-knows-about-customers-habits.html' title=''>http://www.nytimes.com/2004/11/14/business/yourmoney/what-walmart-knows-about-customers-habits.html</a></p>
+						<p>PERRELLI, H. (2017). <em>Sistemas de Informação para Iniciantes: tudo o que você queria saber mas tinha vergonha de perguntar</em>. 1ª ed.</p>
 					</font>
 				</article>
 			</slide>
