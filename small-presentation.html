@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>IF973 - Fundamentos de Sistemas de Informação</title>
+
+	  <meta charset="utf-8">
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	  <meta name="generator" content="pandoc" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css">
+	  <link rel="stylesheet" type="text/css" href="votação.css">
+
+	  <base target="_blank">
+
+	  <script type="text/javascript">
+	    var SLIDE_CONFIG = {
+	      // Slide settings
+	      settings: {
+	                title: 'Fundamentos de Sistemas de Informação',
+	                subtitle: 'O que é Informação?',
+	                useBuilds: true,
+	                usePrettify: true,
+	                enableSlideAreas: true,
+	                enableTouch: true,
+	      },
+
+	      // Author information
+	      presenters: [
+	            {
+	        name: '' ,
+	        company: '',
+	        gplus: '',
+	        twitter: '',
+	        www: '',
+	        github: ''
+	      },
+	            ]
+	    };
+	  </script>
+
+	  <link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+	  <link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+	  <link href="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/hammer.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-controller.js"></script>
+	  <script src="https://rawgit.com/if1015-datascience-ufpe/slides/master/aula01-datascience_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+	  <style type="text/css">
+
+	    b, strong {
+	      font-weight: bold;
+	    }
+
+	    em {
+	      font-style: italic;
+	    }
+
+	    slides > slide {
+	      -webkit-transition: all 0.4s ease-in-out;
+	      -moz-transition: all 0.4s ease-in-out;
+	      -o-transition: all 0.4s ease-in-out;
+	      transition: all 0.4s ease-in-out;
+	    }
+
+	    .auto-fadein {
+	      -webkit-transition: opacity 0.6s ease-in;
+	      -webkit-transition-delay: 0.4s;
+	      -moz-transition: opacity 0.6s ease-in 0.4s;
+	      -o-transition: opacity 0.6s ease-in 0.4s;
+	      transition: opacity 0.6s ease-in 0.4s;
+	      opacity: 0;
+	    }
+
+	  </style>
+
+	  <link rel="stylesheet" href="https://rawgit.com/if1015-datascience-ufpe/slides/master/mytemplate.css" type="text/css" />
+
+	</head>
+
+	<body style="opacity: 0">
+		<slides class="layout-widescreen">
+			<slide class="">
+		        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+			    <hgroup class="auto-fadein">
+				    <h1 data-config-title> <!-- populated from slide_config.json --> </h1>
+				    <h2 data-config-subtitle> <!-- populated from slide_config.json --> </h2>
+				    <p data-config-presenter> <!-- populated from slide_config.json --> </p>
+			        <br><br><br>
+		            <p style="margin-top: 6px; margin-left: -2px;">Gabriel D'Luca, Vitor Lima</p>
+		            <p style="margin-top: 6px; margin-left: -2px;">(IF973) Fundamentos de Sistemas de Informação</p>
+		            <p style="margin-top: 6px; margin-left: -2px;">agosto – 2017</p>
+		        </hgroup>
+			</slide>
+
+			<!-- SLIDE 1 -->
+			<slide class="">
+				<hgroup><h2>O que são dados? (1/2)</h2></hgroup>
+				<article id="o-que-sao-dados-12">
+					<ul>
+						<li>Dados são observações documentadas ou resultados de uma medição</li>
+						<li>Para a informática, os dados são expressões gerais que descrevem características das entidades sobre as quais operam os algoritmos</li>
+					</ul>
+
+					<br>
+
+					<blockquote>
+						<p style="text-align: justify; margin-top: 15px">Pode-se entender um dado como um elemento da informação (um conjunto de letras ou dígitos) que, tomado isoladamente, não transmite nenhum conhecimento, ou seja, não contém nenhum significado intrínseco</p>
+					</blockquote>
+				</article>
+			</slide>
+
+			<!-- SLIDE 2 -->
+			<slide class="">
+				<hgroup><h2>O que são dados? (2/2)</h2></hgroup>
+				<article id="o-que-sao-dados-22">
+					<div class="centered">
+						<p><img src="./static/images/dataset.png" alt="Exemplo de um conjunto de dados"></p>
+					</div>
+				</article>
+			</slide>
+
+			<!-- SLIDE 3 -->
+			<slide class="">
+			<hgroup><h2>Dilúvio de dados</h2></hgroup>
+			<article id="diluvio-de-dados">
+				<ul>
+					<li>Houve uma evolução drástica da infraestrutura para armanezagem e coleta de dados nos últimos 15 anos</li>
+					<li>A evolução da tecnologia influenciou fortemente este processo</li>
+					<li>Mais do que nunca, coletar e analisar dados passou a ser uma necessidade das organizações</li>
+				</ul>
+			</article></slide>
+
+			<!-- SLIDE 4 -->
+			<slide class="">
+				<hgroup><h2>Oportunidades nos dados</h2></hgroup>
+				<article id="oportunidades-nos-dados">
+					<ul>
+						<li>Inserir conteúdo(s) aqui</li>
+					</ul>
+				</article>
+			</slide>
+
+			<!-- SLIDE 5 -->
+			<slide class="">
+				<hgroup><h2>O que é informação?</h2></hgroup>
+				<article id="o-que-e-informacao">
+					<ul>
+						<li>A formalização do processo (semi)automatizado de análise de dados tem recebido diferentes nomes ao longo dos anos</li>
+						<li>Muitos dos métodos classificados como de Data Mining, também são classificados como de Aprendizado de Máquinas</li>
+						<li>Há ainda interseções (ou sobreposições) com Business Intelligence, que muitas vezes inclui métodos de data mining/machine learning e outras técnicas da área de Banco de Dados</li>
+						<li>Mais recentemente, o processo de análise de dados tem sido conhecido como Data Science</li>
+					</ul>
+				</article>
+			</slide>
+
+			<!-- REFERENCES -->
+			<slide class="">
+				<hgroup><h2>Referências</h2></hgroup>
+				<article id="referencias">
+					<font size=3>
+						<p>Wall, M. (2014) <em>Big Data: Are you ready for blast-off?</em>. BBC News. <a href='http://www.bbc.com/news/business-26383058' title=''>http://www.bbc.com/news/business-26383058</a></p>
+
+						<p>Burn-Murdoch, J. (2012) <em>Study: less than 1% of the world&#39;s data is analysed, over 80% is unprotected</em>. The Guardian. <a href='https://www.theguardian.com/news/datablog/2012/dec/19/big-data-study-digital-universe-global-volume' title=''>https://www.theguardian.com/news/datablog/2012/dec/19/big-data-study-digital-universe-global-volume</a></p>
+
+						<p>Hays, C. L. (2004) <em>What Wal-Mart Knows About Customers&#39; Habits</em>. The New York Times. <a href='http://www.nytimes.com/2004/11/14/business/yourmoney/what-walmart-knows-about-customers-habits.html' title=''>http://www.nytimes.com/2004/11/14/business/yourmoney/what-walmart-knows-about-customers-habits.html</a></p>
+					</font>
+				</article>
+			</slide>
+
+			<slide class="backdrop"></slide>
+		</slides>
+
+		<!-- dynamically load mathjax for compatibility with self-contained -->
+		<script>
+			(function () {
+				var script = document.createElement("script");
+		    	script.type = "text/javascript";
+		    	script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		    	document.getElementsByTagName("head")[0].appendChild(script);
+		  	})();
+		</script>
+
+		<!-- map slide visiblity events into shiny -->
+		<script>
+			(function() {
+				if (window.jQuery) {
+		    		window.jQuery(document).on('slideleave', function(e) {
+		        		window.jQuery(e.target).trigger('hidden');
+		    		});
+		    	
+			    	window.jQuery(document).on('slideenter', function(e) {
+			    		window.jQuery(e.target).trigger('shown');
+			    	});
+		    	}
+		  	})();
+		</script>
+	</body>
+</html>
