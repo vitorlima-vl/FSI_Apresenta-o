@@ -348,7 +348,7 @@ document.querySelector('#opcao4').onclick = function() {
 function computarVoto(opcao){
     var opcao1= document.querySelector("#opcao"+opcao.toString());
     var img = document.createElement("img");
-    img.setAttribute("src",'check.png');
+    img.setAttribute("src", "./static/images/icons/check.png");
     opcao1.appendChild(img);
     var opcao1= document.querySelector("#total"+opcao.toString());
     opcao1.textContent= parseInt(opcao1.textContent) + 1
