@@ -236,7 +236,8 @@
 				<hgroup><h2>Big Data</h2></hgroup>
 				<article id="big-data-15">
 					<div class="centered">
-						<iframe style="width:724px; height:408px" src="https://www.youtube.com/embed/eVSfJhssXUA?rel=0?ecver=1?vq=hd720" frameborder="0" allowfullscreen="true"></iframe>
+						<p id="fullscreen-bigData" style="position: absolute; opacity: 0.1">.</p>
+						<iframe style="width:724px; height:408px" id="video-bigData" src="https://www.youtube.com/embed/eVSfJhssXUA?rel=0?ecver=1?vq=hd720" frameborder="0" allowfullscreen="true"></iframe>
 					</div>
 				</article>
 			</slide>
@@ -381,7 +382,7 @@
 						<p><img src="./static/images/graphics.png" alt="Infográficos"></p>
 					</div>
 				</article>
-			</slide>			
+			</slide>
 
 			<!-- SLIDE 23 -->
 			<slide class="">
@@ -512,6 +513,15 @@
 				</article>
 			</slide>
 
+			<!-- SLIDE 32 -->
+			<slide class="">
+				 <hgroup><h2>Gestão do conhecimento</h2></hgroup>
+				 <article id="gestao-do-conhecimento">
+				 <p id="fullscreen-gestao" style="position: absolute; opacity: 0.1">.</p>
+				 <div class="centered"><embed width="645" id="video-gestao" height="415" src="https://www.youtube.com/embed/kSUTNtRDNnc" frameborder="0" allowfullscreen="1"></embed></div>
+				</article>
+			</slide>
+
 			<!-- SLIDE 33 -->
 			<slide class="">
 				<hgroup><h2>Conhecimento</h2></hgroup>
@@ -580,17 +590,14 @@
 				<hgroup><h2>Referências</h2></hgroup>
 				<article id="referencias">
 					<font size=3>
-						<p>PERRELLI, H. et al. (2017). <em>Sistemas de Informação para Iniciantes: tudo o que você queria saber mas tinha vergonha de perguntar</em>. 1ª ed.</p>
-
 						<p>SETZER, V. W. (1999). <em>Dado, Conhecimento, Informação e Competência</em>. Disponível em: <a href='https://www.ime.usp.br/~vwsetzer/datagrama.html' title=''>www.ime.usp.br/~vwsetzer/datagrama.html</a>.<br>Acesso em: 20 ago. 2017.</p>
 
-						<p>OECD. (2001). <em>Glossary of Data</em>. Disponível em: <a href="https://stats.oecd.org/glossary/detail.asp?ID=532">https://stats.oecd.org/glossary/detail.asp?ID=532</a>. Acesso em: 25 ago. 2017.</p>
+						<p>PERRELLI, H. (2017). <em>Sistemas de Informação para Iniciantes: tudo o que você queria saber mas tinha vergonha de perguntar</em>. 1ª ed.</p>
 
-						<p>VIMIEIRO, R. (2017). <em>Introdução a Ciência dos Dados</em>. Disponível em: <a href="https://if1015-datascience-ufpe.github.io/2017.2/">https://if1015-datascience-ufpe.github.io/2017.2/</a>. Acesso em: 25 ago. 2017.</p>
-
-						<p>FERREIRA, N. (2016). <em>Visualização de Dados</em>. Disponível em: <a href="http://www.cin.ufpe.br/~nivan/teaching/data_vis/fall_2016/website/">http://www.cin.ufpe.br/~nivan/teaching/data_vis/fall_2016/website/</a>. Acesso em: 23 ago. 2017.</p>
-
-						<p>PROJECT JUPYTER. (2014). <em>The Jupyter Notebook</em>. Disponível em: <a href="http://jupyter.org/index.html">http://jupyter.org/index.html</a>. Acesso em: 23 ago. 2017.</p>
+						https://stats.oecd.org/glossary/detail.asp?ID=532
+						https://if1015-datascience-ufpe.github.io/2017.2/
+						http://www.cin.ufpe.br/~nivan/teaching/data_vis/fall_2016/website/
+						http://jupyter.org/
 					</font>
 				</article>
 			</slide>
@@ -621,6 +628,17 @@
 				}
 		</script>
 
+		<script>
+			document.getElementById("fullscreen-gestao").addEventListener("click", function(){
+				document.getElementById("video-gestao").setAttribute("style","overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px")
+
+			});
+			document.getElementById("fullscreen-bigData").addEventListener("click", function(){
+				document.getElementById("video-bigData").setAttribute("style","overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px")
+
+			});
+
+		</script>
 		<!-- map slide visiblity events into shiny -->
 		<script>
 			function() {
